@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, rgb(41, 128, 185), rgb(44, 62, 80));
   font-family: 'Inter', 'Poppins', Arial, sans-serif;
 }
 
@@ -198,8 +197,8 @@ h2 {
 }
 
 .login-gradient-btn {
-  background: linear-gradient(90deg, rgb(86, 204, 242) 0%, rgb(47, 230, 173) 100%);
-  color: rgb(255, 255, 255);
+  background-color: #2596ff; /* Blue background */
+  color: #FFFFFF;   
   border: none;
   border-radius: 2rem;
   font-weight: 700;
@@ -212,7 +211,7 @@ h2 {
 }
 
 .login-gradient-btn:hover, .login-gradient-btn:focus {
-  background: linear-gradient(90deg, rgb(47, 230, 173) 0%, rgb(86, 204, 242) 100%);
+  background-color: #2596ff;
   transform: translateY(-2px) scale(1.03);
 }
 
@@ -225,7 +224,7 @@ h2 {
 }
 
 .links a {
-  color: rgb(47, 230, 173);
+  color: rgb(44, 62, 80);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -240,7 +239,7 @@ h2 {
 
 .text-muted {
   color: rgb(120, 144, 156) !important;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 500px) {
@@ -333,4 +332,3 @@ h2 {
   opacity: 1;
   cursor: pointer;
 }
-

@@ -1,0 +1,65 @@
+<div class="login-container">
+  <div class="login-box shadow-lg">
+    <h2 class="welcome-title mb-2">Welcome back!</h2>
+    <div class="welcome-subtitle mb-4">Please login to your account.</div>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" novalidate>
+      <div class="form-group mb-3">
+        <div class="custom-input-group" [ngClass]="{'has-error': loginForm.get('email')?.invalid && loginForm.get('email')?.touched, 'ng-animating': shake && loginForm.get('email')?.invalid}">
+          <i class="fas fa-user input-icon" style="position: absolute; left: 10px;"></i>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+            placeholder="Enter your Mail address"
+            (animationend)="shake = false"
+          />
+        </div>
+        <div class="invalid-feedback d-block" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+          E-mail is required
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <div class="custom-input-group" [ngClass]="{'has-error': loginForm.get('password')?.invalid && loginForm.get('password')?.touched, 'ng-animating': shake && loginForm.get('password')?.invalid}">
+          <i class="fas fa-lock input-icon" style="position: absolute; left: 10px;"></i>
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            id="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Enter your password"
+            (animationend)="shake = false"
+          />
+          <button type="button" class="password-toggle-btn" (click)="showPassword = !showPassword" tabindex="-1">
+            <mat-icon *ngIf="!showPassword">visibility</mat-icon>
+            <mat-icon *ngIf="showPassword">visibility_off</mat-icon>
+          </button>
+        </div>
+        <div class="invalid-feedback d-block" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          Password must be at least 6 characters
+        </div>
+      </div>
+
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="rememberMe" formControlName="rememberMe" />
+        <label class="form-check-label" for="rememberMe">Remember me</label>
+      </div>
+
+      <div class="alert alert-danger py-2" *ngIf="errorMessage">
+        <i class="fas fa-exclamation-circle me-2"></i>{{ errorMessage }}
+      </div>
+
+      <button type="submit" class="btn login-gradient-btn w-100 d-flex align-items-center justify-content-center gap-2 mb-2">
+        <mat-icon class="me-1">login</mat-icon>
+        <span class="fw-bold">{{ loading ? 'Processing...' : 'Login' }}</span>
+      </button>
+
+      <div class="links d-flex justify-content-center gap-2 mt-3">
+        <a routerLink="/forgot" class="forgot-password link-hover">Forgot Password?</a>
+        <span class="text-muted">•</span>
+        <a routerLink="/signup" class="create-account link-hover">Create Account</a>
+      </div>
+    </form>
+  </div>
+</div>

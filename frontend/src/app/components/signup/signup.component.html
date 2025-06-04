@@ -1,0 +1,99 @@
+<div class="signup-hero">
+  <form [formGroup]="signupForm" (ngSubmit)="signup()" class="signup-card">
+    <h2 class="signup-title">Create an account</h2>
+    <div class="signup-subtitle">Sign up today and unlock a world of possibilities. Your adventure begins here.</div>
+
+    <div class="signup-field">
+      <label>Username</label>
+      <div class="signup-input-group">
+        <span class="input-group-text"><mat-icon>person</mat-icon></span>
+        <input type="text" formControlName="name" placeholder="Username" class="form-control" />
+      </div>
+      <div class="error-message" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+        <ng-container *ngIf="name?.errors?.['required']">Name is required</ng-container>
+      </div>
+    </div>
+
+    <div class="signup-field">
+      <label>Email</label>
+      <div class="signup-input-group">
+        <span class="input-group-text"><mat-icon>mail</mat-icon></span>
+        <input type="email" formControlName="email" placeholder="Email" class="form-control" />
+      </div>
+      <div class="error-message" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        <ng-container *ngIf="email?.errors?.['required']">E-Mail is required</ng-container>
+        <ng-container *ngIf="email?.errors?.['email']">Please enter a valid email</ng-container>
+      </div>
+    </div>
+
+    <div class="signup-field">
+      <label>Date of Birth</label>
+      <div class="signup-input-group">
+        <span class="input-group-text"><mat-icon>calendar_today</mat-icon></span>
+        <input type="date" formControlName="dob" placeholder="Date of Birth" class="form-control" />
+      </div>
+      <div class="error-message" *ngIf="dob?.invalid && (dob?.dirty || dob?.touched)">
+        <ng-container *ngIf="dob?.errors?.['required']">Date of Birth is required</ng-container>
+        <ng-container *ngIf="dob?.errors?.['minAge']">You must be at least 15 years old to create the account</ng-container>
+      </div>
+    </div>
+
+    <div class="signup-field">
+      <label>Mobile No</label>
+      <div class="signup-input-group">
+        <span class="input-group-text"><mat-icon>phone</mat-icon></span>
+        <input type="tel" formControlName="mobile" placeholder="Mobile No" class="form-control" />
+      </div>
+      <div class="error-message" *ngIf="mobile?.invalid && (mobile?.dirty || mobile?.touched)">
+        <ng-container *ngIf="mobile?.errors?.['required']">Mobile number is required</ng-container>
+        <ng-container *ngIf="mobile?.errors?.['pattern']">Enter a valid 10-digit mobile number</ng-container>
+      </div>
+    </div>
+
+    <div class="signup-field">
+      <label>Address</label>
+      <div class="signup-input-group">
+        <span class="input-group-text"><mat-icon>home</mat-icon></span>
+        <input type="text" formControlName="address" placeholder="Address" class="form-control" />
+      </div>
+      <div class="error-message" *ngIf="address?.invalid && (address?.dirty || address?.touched)">
+        <ng-container *ngIf="address?.errors?.['required']">Address is required</ng-container>
+      </div>
+    </div>
+
+    <div class="signup-field">
+      <label>Password</label>
+      <div class="signup-input-group">
+        <span class="input-group-text"><mat-icon>lock</mat-icon></span>
+        <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="Password" class="form-control" />
+        <button type="button" class="password-toggle-btn" (click)="showPassword = !showPassword" tabindex="-1">
+          <mat-icon *ngIf="!showPassword">visibility</mat-icon>
+          <mat-icon *ngIf="showPassword">visibility_off</mat-icon>
+        </button>
+      </div>
+      <div class="error-message" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+        <ng-container *ngIf="password?.errors?.['required']">Password is required</ng-container>
+      </div>
+    </div>
+
+    <div class="signup-field">
+      <label>Confirm Password</label>
+      <div class="signup-input-group">
+        <span class="input-group-text"><mat-icon>lock</mat-icon></span>
+        <input [type]="showConfirmPassword ? 'text' : 'password'" formControlName="confirmPassword" placeholder="Confirm Password" class="form-control" />
+        <button type="button" class="password-toggle-btn" (click)="showConfirmPassword = !showConfirmPassword" tabindex="-1">
+          <mat-icon *ngIf="!showConfirmPassword">visibility</mat-icon>
+          <mat-icon *ngIf="showConfirmPassword">visibility_off</mat-icon>
+        </button>
+      </div>
+      <div class="error-message" *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)">
+        <ng-container *ngIf="confirmPassword?.errors?.['required']">Confirm Password is required</ng-container>
+      </div>
+      <div class="error-message" *ngIf="signupForm.errors?.['passwordMismatch'] && signupForm.touched">
+        Passwords do not match
+      </div>
+    </div>
+
+    <button type="submit" class="signup-btn-main">Sign up</button>
+  </form>
+</div>

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;600&display=swap');
+
+.signup-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(247, 249, 250);
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+}
+
+.signup-card {
+  background: rgb(255, 255, 255);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.10);
+  padding: 2.5rem 2.2rem 2rem 2.2rem;
+  max-width: 420px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin: 2rem;
+  animation: fadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+
+}
+
+.signup-icon {
+  background: rgb(18, 28, 40);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem auto;
+}
+.signup-icon mat-icon {
+  color: rgb(255, 255, 255);
+  font-size: 2.2rem;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(18, 28, 40);
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+}
+.signup-subtitle {
+  color: rgb(100, 110, 120);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.signup-field {
+  text-align: left;
+  margin-bottom: 1.1rem;
+}
+.signup-field label {
+  font-size: 1rem;
+  color: rgb(18, 28, 40);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.signup-input-group {
+  display: flex;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border: 1.5px solid rgb(224, 224, 224);
+  border-radius: 8px;
+  padding: 0 0.7rem;
+  height: 2.8rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.signup-input-group:focus-within {
+  border-color: rgb(18, 28, 40);
+  box-shadow: 0 0 0 2px rgba(18, 28, 40, 0.08);
+}
+.input-group-text {
+  background: transparent;
+  border: none;
+  color: rgb(100, 110, 120);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  padding: 0;
+}
+.signup-input-group .form-control {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  flex: 1;
+  font-size: 1.08rem;
+  background: transparent;
+  height: 2.3rem;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.signup-input-group .form-control::placeholder {
+  color: #444;
+  opacity: 0.7;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.password-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(120, 144, 156);
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.password-toggle-btn:hover,
+.password-toggle-btn:focus {
+  color: rgb(18, 28, 40);
+}
+.signup-btn-main {
+  width: 100%;
+  padding: 0.85rem;
+  background: rgb(204, 255, 51);
+  color: rgb(18, 28, 40);
+  border: none;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  margin-top: 0.7rem;
+  margin-bottom: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(204, 255, 51, 0.08);
+}
+.signup-btn-main:hover, .signup-btn-main:focus {
+  background: rgb(180, 230, 40);
+  color: rgb(18, 28, 40);
+}
+.signup-or {
+  color: rgb(120, 130, 140);
+  font-size: 1rem;
+  margin: 0.7rem 0 1.1rem 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.signup-social-group {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.signup-social-btn {
+  background: rgb(255, 255, 255);
+  border: 1.5px solid rgb(224, 224, 224);
+  border-radius: 7px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.3rem;
+  color: rgb(18, 28, 40);
+  display: flex;
+  align-items: center;
+  transition: border 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.signup-social-btn:hover, .signup-social-btn:focus {
+  border-color: rgb(18, 28, 40);
+  box-shadow: 0 0 0 2px rgba(18, 28, 40, 0.08);
+}
+.signup-login-link {
+  color: rgb(120, 130, 140);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.signup-login-link a {
+  color: rgb(18, 28, 40);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.2rem;
+  transition: color 0.2s;
+}
+.signup-login-link a:hover {
+  color: rgb(100, 110, 120);
+}
+.error-message {
+  color: rgb(240, 75, 92);
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.1rem;
+}
+@media (max-width: 600px) {
+  .signup-card {
+    padding: 1.2rem 0.3rem;
+    max-width: 98vw;
+  }
+  .signup-title {
+    font-size: 1.2rem;
+  }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

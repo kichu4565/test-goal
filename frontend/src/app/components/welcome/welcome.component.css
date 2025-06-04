@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;600&display=swap');
+
+.financity-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(220, 230, 245), rgb(210, 225, 245));
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+}
+
+.financity-card {
+  background: rgb(255, 255, 255);
+  border-radius: 36px;
+  box-shadow: 0 12px 40px rgba(44, 62, 80, 0.10);
+  padding: 3.5rem 3rem 2.5rem 3rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  margin: 2rem;
+}
+
+.financity-logo {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+}
+.logo-blue {
+  color: rgb(33, 123, 243);
+}
+.logo-green {
+  color: rgb(44, 183, 87);
+}
+
+.financity-welcome {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: rgb(33, 123, 243);
+  margin-bottom: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+.financity-subtitle {
+  color: rgb(80, 80, 80);
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.financity-tagline {
+  color: rgb(40, 40, 40);
+  font-size: 1.1rem;
+  margin-bottom: 2.1rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.financity-btn-group {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+
+.financity-btn {
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, rgb(33, 123, 243) 0%, rgb(44, 183, 87) 100%);
+  box-shadow: 0 2px 8px rgba(33, 123, 243, 0.08);
+  transition: background 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+.financity-btn:hover, .financity-btn:focus {
+  background: linear-gradient(90deg, rgb(44, 183, 87) 0%, rgb(33, 123, 243) 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.financity-divider {
+  height: 2px;
+  background: rgb(220, 230, 245);
+  margin: 2.2rem 0 1.2rem 0;
+  border-radius: 2px;
+}
+
+.financity-footer {
+  color: rgb(33, 123, 243);
+  font-size: 1.15rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+}
+.footer-blue {
+  color: rgb(33, 123, 243);
+}
+.footer-green {
+  color: rgb(44, 183, 87);
+}
+
+@media (max-width: 600px) {
+  .financity-card {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  .financity-logo {
+    font-size: 2rem;
+  }
+  .financity-welcome {
+    font-size: 1.3rem;
+  }
+}

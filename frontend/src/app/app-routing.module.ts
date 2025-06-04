@@ -6,14 +6,15 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'login', component: LoginComponent},
+  { path: 'signup', component: SignupComponent},
+  { path: 'admin', component: AdminComponent},
   { path: 'home', component: HomeComponent },
-  { path: 'forgot', component: ForgotPasswordComponent }
+  { path: '**', component: WelcomeComponent }
 ];
 
 @NgModule({

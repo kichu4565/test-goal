@@ -123,8 +123,8 @@
 .signup-btn-main {
   width: 100%;
   padding: 0.85rem;
-  background: rgb(204, 255, 51);
-  color: rgb(18, 28, 40);
+  background: #2596ff;
+  color: white;
   border: none;
   border-radius: 7px;
   font-weight: 700;
@@ -136,8 +136,8 @@
   box-shadow: 0 2px 8px rgba(204, 255, 51, 0.08);
 }
 .signup-btn-main:hover, .signup-btn-main:focus {
-  background: rgb(180, 230, 40);
-  color: rgb(18, 28, 40);
+  background: #2596ff;
+  color: white;
 }
 .signup-or {
   color: rgb(120, 130, 140);

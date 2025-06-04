@@ -41,24 +41,18 @@
         </div>
       </div>
 
-      <div class="form-check mb-3">
-        <input type="checkbox" class="form-check-input" id="rememberMe" formControlName="rememberMe" />
-        <label class="form-check-label" for="rememberMe">Remember me</label>
-      </div>
-
       <div class="alert alert-danger py-2" *ngIf="errorMessage">
         <i class="fas fa-exclamation-circle me-2"></i>{{ errorMessage }}
       </div>
 
       <button type="submit" class="btn login-gradient-btn w-100 d-flex align-items-center justify-content-center gap-2 mb-2">
-        <mat-icon class="me-1">login</mat-icon>
         <span class="fw-bold">{{ loading ? 'Processing...' : 'Login' }}</span>
       </button>
 
       <div class="links d-flex justify-content-center gap-2 mt-3">
-        <a routerLink="/forgot" class="forgot-password link-hover">Forgot Password?</a>
-        <span class="text-muted">•</span>
-        <a routerLink="/signup" class="create-account link-hover">Create Account</a>
+        <!-- <a routerLink="/forgot" class="forgot-password link-hover">Forgot Password?</a> -->
+        <span class="text-muted">Don't have an account?</span>
+        <a routerLink="/signup" class="create-account link-hover">Sign up</a>
       </div>
     </form>
   </div>

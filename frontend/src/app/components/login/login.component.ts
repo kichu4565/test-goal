@@ -63,4 +63,3 @@ export class LoginComponent {
     localStorage.removeItem('token');
   }
 }
-
